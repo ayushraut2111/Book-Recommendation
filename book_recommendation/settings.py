@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "rest_framework",
 
     # external apps
     "books",
@@ -115,3 +116,16 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': [
+#         'rest_framework.renderers.JSONRenderer',
+#     ],
+# }
+
+
+# google books apis conf
+
+class GOOGLE_BOOKS_APIS_CONF:
+    API_URL = config("GOOGLE_BOOKS_API_URL")
+    API_KEY = config("GOOGLE_BOOKS_API_KEY")
